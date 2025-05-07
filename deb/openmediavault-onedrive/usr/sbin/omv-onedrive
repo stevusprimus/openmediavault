@@ -31,6 +31,8 @@ start_onedrive_service() {
   if [ "$enabled" = "enabled" ]; then
     echo "Please wait, starting service ..."
     systemctl start onedrive@onedrive.service || true
+  else
+    echo "Service is disabled, will not start the service!"
   fi
 }
 
